@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Livewire\ChangePassword;
+use App\Http\Livewire\Profile;
+use App\Http\Livewire\Work;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/livewire', function(){
+    return view('test');
+});
+
+Route::get('/profile', Profile::class);
+Route::get('/work', Work::class);
+Route::get('/changepassword', ChangePassword::class);
